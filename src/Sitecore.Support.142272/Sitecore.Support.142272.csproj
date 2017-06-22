@@ -40,32 +40,32 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MongoDB.Bson, Version=1.10.0.62, Culture=neutral, PublicKeyToken=f686731cfb9cc103, processorArchitecture=MSIL">
-      <HintPath>..\packages\SC.MongoDB.Bson.8.1.2\lib\MongoDB.Bson.dll</HintPath>
+    <Reference Include="MongoDB.Bson">
+      <HintPath>..\packages\SC.MongoDB.Bson.8.1.1\lib\MongoDB.Bson.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="MongoDB.Driver, Version=1.10.0.62, Culture=neutral, PublicKeyToken=f686731cfb9cc103, processorArchitecture=MSIL">
-      <HintPath>..\packages\SC.MongoDB.Driver.8.1.2\lib\MongoDB.Driver.dll</HintPath>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\packages\SC.MongoDB.Driver.8.1.1\lib\MongoDB.Driver.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sitecore.Analytics, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SC.Sitecore.Analytics.8.1.2\lib\Sitecore.Analytics.dll</HintPath>
+    <Reference Include="Sitecore.Analytics">
+      <HintPath>..\packages\SC.Sitecore.Analytics.8.1.1\lib\Sitecore.Analytics.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sitecore.Analytics.DataAccess, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SC.Sitecore.Analytics.DataAccess.8.1.2\lib\Sitecore.Analytics.DataAccess.dll</HintPath>
+    <Reference Include="Sitecore.Analytics.DataAccess">
+      <HintPath>..\packages\SC.Sitecore.Analytics.DataAccess.8.1.1\lib\Sitecore.Analytics.DataAccess.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sitecore.Analytics.Model, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SC.Sitecore.Analytics.Model.8.1.2\lib\Sitecore.Analytics.Model.dll</HintPath>
+    <Reference Include="Sitecore.Analytics.Model">
+      <HintPath>..\packages\SC.Sitecore.Analytics.Model.8.1.1\lib\Sitecore.Analytics.Model.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sitecore.Analytics.MongoDB, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SC.Sitecore.Analytics.MongoDB.8.1.2\lib\Sitecore.Analytics.MongoDB.dll</HintPath>
+    <Reference Include="Sitecore.Analytics.MongoDB">
+      <HintPath>..\packages\SC.Sitecore.Analytics.MongoDB.8.1.1\lib\Sitecore.Analytics.MongoDB.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sitecore.Kernel">
-      <HintPath>..\packages\SC.Sitecore.Kernel.8.1.2\lib\Sitecore.Kernel.dll</HintPath>
+      <HintPath>..\packages\SC.Sitecore.Kernel.8.1.1\lib\Sitecore.Kernel.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
