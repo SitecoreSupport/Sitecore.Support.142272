@@ -20,6 +20,8 @@
 
         private readonly Func<string, MongoDbDriver> driverFactory;
 
+        private MongoDBClassifications classifications;
+
         internal static readonly TimeSpan IdentifierLockTimeout;
 
         public override TrafficTypeBase TrafficType
@@ -34,7 +36,11 @@
         {
             get
             {
-                return new MongoDBClassifications(this.driver);
+                if (this.classifications == null)
+                {
+                    this.classifications = new MongoDBClassifications(this.driver);
+                }
+                return this.classifications;
             }
         }
 
