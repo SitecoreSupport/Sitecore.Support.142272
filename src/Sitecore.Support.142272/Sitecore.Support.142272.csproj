@@ -21,6 +21,7 @@
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
     <TargetFrameworkProfile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -44,8 +45,12 @@
       <HintPath>..\packages\SC.MongoDB.Bson.8.2.5\lib\MongoDB.Bson.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="MongoDB.Driver">
-      <HintPath>..\packages\SC.MongoDB.Driver.8.2.5\lib\MongoDB.Driver.dll</HintPath>
+    <Reference Include="MongoDB.Driver.Core, Version=2.4.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SC.MongoDB.Driver.Core.8.2.5\lib\MongoDB.Driver.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Legacy, Version=2.4.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SC.MongoDB.Driver.Legacy.8.2.5\lib\MongoDB.Driver.Legacy.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sitecore.Analytics">

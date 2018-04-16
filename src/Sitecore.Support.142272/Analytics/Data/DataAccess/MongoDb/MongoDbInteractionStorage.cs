@@ -123,12 +123,12 @@
                         }));
                         continue;
                     }
-                    mongoUpdateList.Add((IMongoUpdate)Update<VisitData>.Set<Guid>((Expression<Func<VisitData, Guid>>)(x => x.ContactId), survivingContactId));
-                }
+                    mongoUpdateList.Add(Update<VisitData>.Set<Guid>(x => x.ContactId, survivingContactId));
+        }
                 if (visitData1.ContactVisitIndex != num)
                 {
-                    mongoUpdateList.Add((IMongoUpdate)Update<VisitData>.Set<int>((Expression<Func<VisitData, int>>)(x => x.ContactVisitIndex), num));
-                }
+                    mongoUpdateList.Add(Update<VisitData>.Set<int>(x => x.ContactVisitIndex, num));
+        }
                 if (mongoUpdateList.Count > 0)
                 {
                     IMongoUpdate update = (IMongoUpdate)Update<VisitData>.Combine((IEnumerable<IMongoUpdate>)mongoUpdateList);
@@ -171,7 +171,7 @@
                 bool flag2 = visitData.ContactVisitIndex != num;
                 if (flag2)
                 {
-                    IMongoUpdate update = Update<VisitData>.Set<int>((VisitData x) => x.ContactVisitIndex, num);
+                    IMongoUpdate update = Update<VisitData>.Set<int>(x => x.ContactVisitIndex, num);
                     this.UpdateInteraction(existingInteraction, update);
                 }
             }
@@ -198,19 +198,19 @@
             updateVisit(data);
             try
             {
-                this.interactions.Insert(data);
+                this.interactions.Insert<VisitData>(data);
                 this.interactions.Remove(existingVisit, RemoveFlags.Single, WriteConcern.Unacknowledged);
             }
-            catch (WriteConcernException exception)
+            catch (MongoWriteConcernException exception)
             {
-                int? code = exception.CommandResult.Code;
+                int? code = exception.Code;
                 int num = 11000;
                 if ((code.GetValueOrDefault() == num) ? !code.HasValue : true)
                 {
                     throw;
                 }
                 this.interactions.Remove(existingVisit, RemoveFlags.Single, WriteConcern.Acknowledged);
-                this.interactions.Insert(data);
+                this.interactions.Insert<VisitData>(data);
             }
         }
     }
